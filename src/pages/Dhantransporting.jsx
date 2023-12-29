@@ -140,7 +140,7 @@ const Dhantransporting = () => {
         }
       );
 
-      if (response.status === 201) {
+      if (response.status >= 201 || response.status < 300) {
         // console.log("Form data sent successfully");
         toast.success("Dhan Transporting added successfully", {
           position: "top-right",

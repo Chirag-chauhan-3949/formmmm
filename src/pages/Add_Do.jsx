@@ -117,7 +117,7 @@ const Add_Do = () => {
         }
       );
       // console.log("Response:", response);
-      if (response.status === 201) {
+      if (response.status >= 201 || response.status < 300) {
         // console.log("Form data sent successfully");
         toast.success("Do added successfully", {
           position: "top-right",

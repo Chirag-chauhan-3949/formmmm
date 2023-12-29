@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Inputbox from "../inputelement/Inputbox";
-<<<<<<< HEAD
+
 import axios from "axios";
-=======
->>>>>>> origin/main
 
 const Addricemill = () => {
   const [Addricedata, setAddricedata] = useState({
@@ -54,11 +52,8 @@ const Addricemill = () => {
     }
     try {
       const response = await axios.post(
-<<<<<<< HEAD
         "http://localhost:8000/add-rice-mill/",
-=======
-        "http://mill.dappfolk.com/add-rice-mill/",
->>>>>>> origin/main
+
         Addricedata,
         {
           headers: {
@@ -67,7 +62,7 @@ const Addricemill = () => {
         }
       );
 
-      if (response.status === 200) {
+      if (response.status >= 201 || response.status < 300) {
         // console.log("Rice mill added successfully");
         toast.success("Rise mill added successfully", {
           position: "top-right",

@@ -68,7 +68,7 @@ const Kochia = () => {
         }
       );
 
-      if (response.status === 200) {
+      if (response.status >= 201 || response.status < 300) {
         // console.log("Kochia added successfully");
         toast.success("Kochia added successfully", {
           position: "top-right",

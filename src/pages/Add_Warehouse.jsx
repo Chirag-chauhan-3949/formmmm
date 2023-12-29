@@ -39,7 +39,7 @@ const Add_Warehouse = () => {
         }
       );
 
-      if (response.status === 200) {
+      if (response.status >= 201 || response.status < 300) {
         // console.log("Rice mill added successfully");
         toast.success("Ware House added successfully", {
           position: "top-right",
