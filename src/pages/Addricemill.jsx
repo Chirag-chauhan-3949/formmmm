@@ -52,7 +52,7 @@ const Addricemill = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:8000/add-rice-mill/",
+        "https://mill.dappfolk.com/add-rice-mill/",
 
         Addricedata,
         {
