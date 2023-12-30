@@ -7,11 +7,14 @@ function View_RiceMill() {
     const fetchData = async () => {
       try {
         // Replace 'YOUR_API_KEY' with your actual API key
-        const response = await axios.get("http://localhost:8000/rice-mill/", {
-          headers: {
-            "api-key": apiKey,
-          },
-        });
+        const response = await axios.get(
+          "https://mill.dappfolk.com/rice-mill/",
+          {
+            headers: {
+              "api-key": apiKey,
+            },
+          }
+        );
 
         setdata(response.data);
       } catch (error) {
